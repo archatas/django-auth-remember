@@ -4,7 +4,8 @@ Django auth remember app
 .. image:: https://travis-ci.org/ailabs/django-auth-remember.png?branch=master
    :target: https://travis-ci.org/ailabs/django-auth-remember
 
-``django-auth-remember`` supports `Django`_ 1.7.8 on Python 2.7.
+``django-auth-remember`` supports `Django`_ 1.11 on Python 2.7.
+Earlier Django versions or later Python versions might also work, but are not tested.
 
 .. _Django: http://www.djangoproject.com/
 
@@ -18,12 +19,12 @@ Add the auth_remember authentication backend to django::
 Add the remember middleware in your settings, right after
 AuthenticationMiddleware::
 
-    MIDDLEWARE_CLASSES = (
+    MIDDLEWARE = [
         ...
         'django.contrib.auth.middleware.AuthenticationMiddleware',
         'auth_remember.middleware.AuthRememberMiddleware',
         ...
-    )
+    ]
 
 
 Add auth_remember to INSTALLED_APPS::
