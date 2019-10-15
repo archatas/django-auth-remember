@@ -6,7 +6,6 @@ from django.utils.translation import ugettext_lazy as _
 from django.db import models
 from django.conf import settings as django_settings
 from django.utils.encoding import python_2_unicode_compatible
-from django.utils.text import force_text
 
 from auth_remember import settings
 from auth_remember.auth_utils import check_password
