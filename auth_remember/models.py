@@ -41,7 +41,7 @@ class RememberToken(models.Model):
 
     created_initial = models.DateTimeField(_("Created Initially"), editable=False, blank=False)
 
-    user = models.ForeignKey(django_settings.AUTH_USER_MODEL, verbose_name=_("User"), related_name="remember_me_tokens")
+    user = models.ForeignKey(django_settings.AUTH_USER_MODEL, verbose_name=_("User"), related_name="remember_me_tokens", on_delete=models.CASCADE)
 
     objects = RememberTokenManager()
 
